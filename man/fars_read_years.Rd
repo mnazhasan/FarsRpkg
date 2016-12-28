@@ -22,8 +22,7 @@ parameter "years." The output of the function is a list of as many dataframes
 as the number of years provided in the parameter. Each dataframe contains only
 two varibales, year and MONTH. Additionally, the function
 also provides additional mechanism for handling errors and warnings if the
-input parameter (year) is not a valid year to be found in the read files. This
-error and warning mechanism is provided by using (\code{tryCatch(expr, ... )})
+input parameter (year) is not a valid year to be found in the read files.
 No messages will be posted if there is no error or wanrings.
 }
 \examples{
