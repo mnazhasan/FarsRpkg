@@ -27,7 +27,9 @@ error and warning mechanism is provided by using (\code{tryCatch(expr, ... )})
 No messages will be posted if there is no error or wanrings.
 }
 \examples{
+\dontrun{
 fars_read_years(c(2013,2014,2015))
+}
 
 }
 
