@@ -24,7 +24,9 @@ function ignores all simple messages in the context by using
 (\code{\link{suppressMessages(expr ...)}})
 }
 \examples{
+\dontrun {
 fars_read("~/Building_R_Packages/Wk2/data/accident_2013.csv.bz2")
+}
 
 }
 
