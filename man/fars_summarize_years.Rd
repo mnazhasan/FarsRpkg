@@ -29,7 +29,9 @@ the output is piped to organize the monthly number of observatons by year using
 (\code{spread(year,n)}) function imported from 'tidyr' package.
 }
 \examples{
+\dontrun{
 fars_summarize_years(c(2013,2014,2015))
+}
 
 }
 
