@@ -9,7 +9,7 @@ test_that("correct filename", {
 })
 
 test_that("correct class", {
-  expect_is(fars_read("~/data/accident_2013.csv.bz2"), "data.frame")
+  expect_is(fars_read("~/Documents/data/accident_2013.csv.bz2"), "data.frame")
 })
 
 test_that("warning message", {
