@@ -1,0 +1,21 @@
+Package: FarsRpkg
+Type: Package
+Title: Fatality Analysis Reporting System
+Version: 0.1
+Date: 2016-12-25
+Authors@R: person("MOhammad", "Hasan", email = "mnazmul816@gmail.com", role = c("aut", "cre"))
+Description: Reads a datafile containing annual fatal injuries occurred in motor
+    vehicle crashes in US nationwide, summarize the data in a tabular form in terms
+    of monthly fatalities in a given year
+License: What license is it under?
+URL: https//github.com/mnazhasan/FarsRpkg
+LazyData: TRUE
+RoxygenNote: 5.0.1
+Imports: dplyr,
+    readr,
+    tidyr,
+    maps
+Suggests: knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr
