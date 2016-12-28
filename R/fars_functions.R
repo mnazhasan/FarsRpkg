@@ -166,7 +166,9 @@ fars_summarize_years <- function(years) {
 #'  fatal accident locations identified by dimensions of longitude and latitude.
 #'
 #'  @examples
+#'  \dontrun{
 #'  fars_map_state(state.num=1,year=2015)
+#'  }
 #'
 #'  @export
 fars_map_state <- function(state.num, year) {
