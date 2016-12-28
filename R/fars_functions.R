@@ -73,7 +73,7 @@ make_filename <- function(year) {
 #' @param years a list or vector containing year specification such as
 #' (\code{years=c(2013,2014,2015)}) or using (\code{years=list(2013,2014,2015)})
 #'
-#' @importFrom magrittr %>%
+#' @importFrom dplyr %>%
 #'
 #' @importFrom dplyr mutate select
 #'
@@ -118,7 +118,7 @@ fars_read_years <- function(years) {
 #' @param years a list or vector containing year specification such as
 #' (\code{years=c(2013,2014,2015)}) or using (\code{years=list(2013,2014,2015)})
 #'
-#' @importFrom magrittr %>%
+#' @importFrom dplyr %>%
 #'
 #' @importFrom dplyr bind_rows group_by summarize
 #'
