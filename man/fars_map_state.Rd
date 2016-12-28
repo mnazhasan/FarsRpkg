@@ -31,7 +31,9 @@ package, and two other functions, one is (\code{map("state", ylim, xlim)}) from\
  fatal accident locations identified by dimensions of longitude and latitude.
 
 @examples
+ \dontrun{
  fars_map_state(state.num=1,year=2015)
+ }
 
 @export
 }
