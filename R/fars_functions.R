@@ -19,7 +19,9 @@
 #' filename provided as parameter of the function
 #'
 #' @examples
+#' \dontrun {
 #' fars_read("~/Building_R_Packages/Wk2/data/accident_2013.csv.bz2")
+#' }
 #'
 #' @export
 #'
@@ -48,7 +50,9 @@ fars_read <- function(filename) {
 #' combination of texts and parameter values "year."
 #'
 #' @examples
+#' \dontrun{
 #' make_filename(2013)
+#' }
 #'
 #' @export
 make_filename <- function(year) {
@@ -69,6 +73,8 @@ make_filename <- function(year) {
 #' @param years a list or vector containing year specification such as
 #' (\code{years=c(2013,2014,2015)}) or using (\code{years=list(2013,2014,2015)})
 #'
+#' @importFrom magrittr %>%
+#'
 #' @importFrom dplyr mutate select
 #'
 #' @return This function returs a list of dataframes for each year as specified in
@@ -77,7 +83,9 @@ make_filename <- function(year) {
 #' mode. Each dataframe will have two columns: Month and year.
 #'
 #' @examples
+#' \dontrun{
 #' fars_read_years(c(2013,2014,2015))
+#' }
 #'
 #' @export
 fars_read_years <- function(years) {
@@ -110,7 +118,9 @@ fars_read_years <- function(years) {
 #' @param years a list or vector containing year specification such as
 #' (\code{years=c(2013,2014,2015)}) or using (\code{years=list(2013,2014,2015)})
 #'
-#' @importFrom dplyr summarize
+#' @importFrom migrittr %>%
+#'
+#' @importFrom dplyr bind_rows group_by summarize
 #'
 #' @importFrom tidyr spread
 #'
@@ -119,7 +129,9 @@ fars_read_years <- function(years) {
 #' each column representing a year.
 #'
 #' @examples
+#' \dontrun{
 #' fars_summarize_years(c(2013,2014,2015))
+#' }
 #'
 #' @export
 fars_summarize_years <- function(years) {
