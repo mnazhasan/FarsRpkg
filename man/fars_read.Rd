@@ -20,8 +20,7 @@ package. The function begins with checking whether the filename provided to
 the function as input exists before reading it as a dataframe in r.This function
 has been customized NOT to display the progress report on reading time in an
 interactive session.Additionally, while creating the data in R session, this
-function ignores all simple messages in the context by using
-(\code{\link{suppressMessages(expr ...)}})
+function ignores all simple messages in the context
 }
 \examples{
 \dontrun {
