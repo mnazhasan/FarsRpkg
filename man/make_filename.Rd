@@ -25,7 +25,9 @@ objects. Inside sprintf the fmt specification must include the full pathname
 so that the filename returned is available in the local computer.
 }
 \examples{
+\dontrun{
 make_filename(2013)
+}
 
 }
 
