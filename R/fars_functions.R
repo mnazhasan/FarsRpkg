@@ -150,25 +150,25 @@ fars_summarize_years <- function(years) {
 #' \code{maps} package, and the other (\code{points(LONGITUD,LATITUD,pch)}) from
 #' \code{graphics} package.
 #'
-#'  @param state.num A number representing a state that is converted as integer.
+#' @param state.num A number representing a state that is converted as integer.
 #'
-#'  @param year A four-digit number representing a specific year
+#' @param year A four-digit number representing a specific year
 #'
-#'  @importFrom dplyr filter
+#' @importFrom dplyr filter
 #'
-#'  @importFrom maps map
+#' @importFrom maps map
 #'
-#'  @importFrom graphics points
+#' @importFrom graphics points
 #'
-#'  @return The function returns a state-specific map of a year, pointing
-#'  fatal accident locations identified by dimensions of longitude and latitude.
+#' @return The function returns a state-specific map of a year, pointing
+#' fatal accident locations identified by dimensions of longitude and latitude.
 #'
-#'  @examples
-#'  \dontrun{
-#'  fars_map_state(1,2013)
-#'  }
+#' @examples
+#' \dontrun{
+#' fars_map_state(1,2013)
+#' }
 #'
-#'  @export
+#' @export
 fars_map_state <- function(state.num, year) {
         filename <- make_filename(year)
         data <- fars_read(filename)
