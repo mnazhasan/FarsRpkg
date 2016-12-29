@@ -11,10 +11,10 @@ This function maps locations of accidents occured in each state of a specific
 year. It provides messages if the state number is invalid or when there are no
 accidents to plot in a state of a given year. Before creating a map for a state
 all the missing observations involving Latitude and Longitude are removed from
-the dataset.This function uses (\code{filter(data, state.num)}) from 'dplyr'
-package, and two other functions, one is (\code{map("state", ylim, xlim)}) from\
-'maps' package, and the other (\code{points(LONGITUD,LATITUD,pch)}) from
-'graphics' package.
+the dataset.This function uses (\code{filter(data, state.num)}) from \code{dplyr}
+package, and two other functions, one is (\code{map(state, ylim, xlim)}) from
+\code{maps} package, and the other (\code{points(LONGITUD,LATITUD,pch)}) from
+\code{graphics} package.
 }
 \details{
 @param state.num A number representing a state that is converted as integer.
