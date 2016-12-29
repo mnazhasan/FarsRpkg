@@ -2,6 +2,7 @@
 
 https://travis-ci.org/mnazhasan/FarsRpkg.svg?branch=master
 
+https://travis-ci.org/travis-ci/travis-web
 
 ## An Overview of the Package
 
