@@ -1,5 +1,7 @@
 # FarsRpkg
 
+https://travis-ci.org/mnazhasan/FarsRpkg.svg?branch=master
+
 
 ## An Overview of the Package
 
