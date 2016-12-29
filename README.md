@@ -1,5 +1,6 @@
 # FarsRpkg
 
+
 ## An Overview of the Package
 
 To provide an overall measure and assessment of highway safety in the Unites States, the National Highway Traffic Safety Administration (NHTSA) created the Fatality Analysis Reporting System (FARS). FARS contains census data on fatal motor vehicle crashes occurred in all 50 states of America, Puerto Rico, and the District of Columbia. For a quick review see [wikipedia](https://en.wikipedia.org/wiki/Fatality_Analysis_Reporting_System)
