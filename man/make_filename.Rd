@@ -11,12 +11,12 @@ make_filename(year)
 }
 \value{
 The function returns a character vector containing a formatted
-combination of texts and parameter values "year."
+combination of texts and parameter values \code{year}.
 }
 \description{
 This simple function creates filename depending on the year variable that is
 being provided as an input of the function. The function takes the year as
-a parameter of the function. The "year" parameter can be supplied as just a
+a parameter of the function. The \code{year} parameter can be supplied as just a
 number or a string. Inside the function it will be converted as integer.
 }
 \note{
