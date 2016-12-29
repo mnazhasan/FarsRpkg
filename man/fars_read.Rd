@@ -23,8 +23,8 @@ interactive session.Additionally, while creating the data in R session, this
 function ignores all simple messages in the context
 }
 \examples{
-\dontrun {
-fars_read("~/Building_R_Packages/Wk2/data/accident_2013.csv.bz2")
+\dontrun{
+fars_read("~/data/accident_2013.csv.bz2")
 }
 
 }
