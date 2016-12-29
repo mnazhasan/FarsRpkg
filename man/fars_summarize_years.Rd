@@ -24,9 +24,9 @@ begins with reading multiple years of data using another function
 uses 'dplyr' package to stack dataframes (dat_list) using (\code{bind_rows(dat_list)})
 and group the observations of combined dataframe by year and month using
 (\code{group_by(year,MONTH)}) function, whose output is then piped for summary
-dataframe using (\code{summarize(n=n())}) function of 'dplyr' package. Finally,
+dataframe using (\code{summarize(n=n())}) function of \code{dplyr} package. Finally,
 the output is piped to organize the monthly number of observatons by year using
-(\code{spread(year,n)}) function imported from 'tidyr' package.
+(\code{spread(year,n)}) function imported from \code{tidyr} package.
 }
 \examples{
 \dontrun{
