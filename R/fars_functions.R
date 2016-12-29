@@ -18,8 +18,8 @@
 #' filename provided as parameter of the function
 #'
 #' @examples
-#' \dontrun {
-#' fars_read("~/Building_R_Packages/Wk2/data/accident_2013.csv.bz2")
+#' \dontrun{
+#' fars_read("~/data/accident_2013.csv.bz2")
 #' }
 #'
 #' @export
@@ -36,7 +36,7 @@ fars_read <- function(filename) {
 #'
 #' This simple function creates filename depending on the year variable that is
 #' being provided as an input of the function. The function takes the year as
-#' a parameter of the function. The "year" parameter can be supplied as just a
+#' a parameter of the function. The \code{year} parameter can be supplied as just a
 #' number or a string. Inside the function it will be converted as integer.
 #'
 #' @param year a character string or number indicating year to create the filename
@@ -46,7 +46,7 @@ fars_read <- function(filename) {
 #' so that the filename returned is available in the local computer.
 #'
 #' @return The function returns a character vector containing a formatted
-#' combination of texts and parameter values "year."
+#' combination of texts and parameter values \code{year}.
 #'
 #' @examples
 #' \dontrun{
@@ -58,14 +58,14 @@ make_filename <- function(year) {
         year <- as.integer(year)
         sprintf("accident_%d.csv.bz2", year)
 }
-#' Check and create valid "years" of FARS data
+#' Check and create valid years of FARS data
 #'
 #' This function creates multiple years of FARS data as specified by the
-#' parameter "years." The output of the function is a list of as many dataframes
+#' parameter \code{years}. The output of the function is a list of as many dataframes
 #' as the number of years provided in the parameter. Each dataframe contains only
 #' two varibales, year and MONTH. Additionally, the function
 #' also provides additional mechanism for handling errors and warnings if the
-#' input parameter (year) is not a valid year to be found in the read files.
+#' input parameter \code{year} is not a valid year to be found in the read files.
 #' No messages will be posted if there is no error or wanrings.
 #'
 #' @param years a list or vector containing year specification such as
@@ -92,7 +92,7 @@ fars_read_years <- function(years) {
                 tryCatch({
                         dat <- fars_read(file)
                         dplyr::mutate(dat, year = year) %>%
-                                dplyr::select(MONTH, year)
+                                dplyr::select(~MONTH, ~year)
                 }, error = function(e) {
                         warning("invalid year: ", year)
                         return(NULL)
@@ -109,9 +109,9 @@ fars_read_years <- function(years) {
 #' uses 'dplyr' package to stack dataframes (dat_list) using (\code{bind_rows(dat_list)})
 #' and group the observations of combined dataframe by year and month using
 #' (\code{group_by(year,MONTH)}) function, whose output is then piped for summary
-#' dataframe using (\code{summarize(n=n())}) function of 'dplyr' package. Finally,
+#' dataframe using (\code{summarize(n=n())}) function of \code{dplyr} package. Finally,
 #' the output is piped to organize the monthly number of observatons by year using
-#' (\code{spread(year,n)}) function imported from 'tidyr' package.
+#' (\code{spread(year,n)}) function imported from \code{tidyr} package.
 #'
 #' @param years a list or vector containing year specification such as
 #' (\code{years=c(2013,2014,2015)}) or using (\code{years=list(2013,2014,2015)})
@@ -135,8 +135,8 @@ fars_read_years <- function(years) {
 fars_summarize_years <- function(years) {
         dat_list <- fars_read_years(years)
         dplyr::bind_rows(dat_list) %>%
-                dplyr::group_by(year, MONTH) %>%
-                dplyr::summarize(n = n()) %>%
+                dplyr::group_by(~year, ~MONTH) %>%
+                dplyr::summarize(n = ~n()) %>%
                 tidyr::spread(year, n)
 }
 #' Map yearly traffic accidents occured in a state
@@ -145,10 +145,10 @@ fars_summarize_years <- function(years) {
 #' year. It provides messages if the state number is invalid or when there are no
 #' accidents to plot in a state of a given year. Before creating a map for a state
 #' all the missing observations involving Latitude and Longitude are removed from
-#' the dataset.This function uses (\code{filter(data, state.num)}) from 'dplyr'
-#' package, and two other functions, one is (\code{map("state", ylim, xlim)}) from\
-#' 'maps' package, and the other (\code{points(LONGITUD,LATITUD,pch)}) from
-#' 'graphics' package.
+#' the dataset.This function uses (\code{filter(data, state.num)}) from \code{dplyr}
+#' package, and two other functions, one is (\code{map(state, ylim, xlim)}) from
+#' \code{maps} package, and the other (\code{points(LONGITUD,LATITUD,pch)}) from
+#' \code{graphics} package.
 #'
 #'  @param state.num A number representing a state that is converted as integer.
 #'
@@ -176,7 +176,7 @@ fars_map_state <- function(state.num, year) {
 
         if(!(state.num %in% unique(data$STATE)))
                 stop("invalid STATE number: ", state.num)
-        data.sub <- dplyr::filter(data, STATE == state.num)
+        data.sub <- dplyr::filter(data, ~STATE == state.num)
         if(nrow(data.sub) == 0L) {
                 message("no accidents to plot")
                 return(invisible(NULL))
