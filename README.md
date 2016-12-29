@@ -2,7 +2,7 @@
 
 https://travis-ci.org/mnazhasan/FarsRpkg.svg?branch=master
 
-https://travis-ci.org/travis-ci/travis-web
+https://travis-ci.org/mnazhasan/FarsRpkg/builds/187369687
 
 ## An Overview of the Package
 
