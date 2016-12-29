@@ -6,6 +6,15 @@
 \usage{
 fars_map_state(state.num, year)
 }
+\arguments{
+\item{state.num}{A number representing a state that is converted as integer.}
+
+\item{year}{A four-digit number representing a specific year}
+}
+\value{
+The function returns a state-specific map of a year, pointing
+fatal accident locations identified by dimensions of longitude and latitude.
+}
 \description{
 This function maps locations of accidents occured in each state of a specific
 year. It provides messages if the state number is invalid or when there are no
@@ -16,25 +25,10 @@ package, and two other functions, one is (\code{map(state, ylim, xlim)}) from
 \code{maps} package, and the other (\code{points(LONGITUD,LATITUD,pch)}) from
 \code{graphics} package.
 }
-\details{
-@param state.num A number representing a state that is converted as integer.
+\examples{
+\dontrun{
+fars_map_state(1,2013)
+}
 
-@param year A four-digit number representing a specific year
-
-@importFrom dplyr filter
-
-@importFrom maps map
-
-@importFrom graphics points
-
-@return The function returns a state-specific map of a year, pointing
- fatal accident locations identified by dimensions of longitude and latitude.
-
-@examples
- \dontrun{
- fars_map_state(1,2013)
- }
-
-@export
 }
 
