@@ -2,7 +2,7 @@
 % Please edit documentation in R/fars_functions.R
 \name{fars_read_years}
 \alias{fars_read_years}
-\title{Check and create valid "years" of FARS data}
+\title{Check and create valid years of FARS data}
 \usage{
 fars_read_years(years)
 }
@@ -18,11 +18,11 @@ mode. Each dataframe will have two columns: Month and year.
 }
 \description{
 This function creates multiple years of FARS data as specified by the
-parameter "years." The output of the function is a list of as many dataframes
+parameter \code{years}. The output of the function is a list of as many dataframes
 as the number of years provided in the parameter. Each dataframe contains only
 two varibales, year and MONTH. Additionally, the function
 also provides additional mechanism for handling errors and warnings if the
-input parameter (year) is not a valid year to be found in the read files.
+input parameter \code{year} is not a valid year to be found in the read files.
 No messages will be posted if there is no error or wanrings.
 }
 \examples{
